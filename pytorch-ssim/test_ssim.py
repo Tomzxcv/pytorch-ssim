@@ -6,11 +6,11 @@ import cv2
 import numpy as np
 import os
 
-g_basic_path = '/home/lhm/aibee_workspace/neck_test/src/neck_data/0603-test/'
+g_basic_path = '/home/lhm/aibee_workspace/neck_test/src/neck_data/setup_new/'
 min_s_score = 0.95
 
-f_out = open('./0603-test_result_all.txt', 'w')
-f_s = open('./0603-test_result_big.txt', 'w')
+f_out = open('./setup-new_result_all.txt', 'w')
+f_s = open('./setip-new_result_big.txt', 'w')
 f_out.write('#file_name, index, ssim, lxy, cxy, sxy\n')
 f_s.write('#file_name, index, sxy. score = ' + str(min_s_score) + '\n')
 
@@ -25,7 +25,7 @@ for current_line in lines:
     img2_path = g_basic_path + current_line
 
     for i in range(0, 6):
-        print(img1_path + '/test-' + str(i) + '.jpg')
+        print(img2_path + '/test-' + str(i) + '.jpg')
         npImg1 = cv2.imread(img1_path + '/test-' + str(i) + '.jpg')
         npImg2 = cv2.imread(img2_path + '/test-' + str(i) + '.jpg')
 
